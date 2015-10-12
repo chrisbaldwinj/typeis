@@ -36,5 +36,5 @@ function typeis(obj,strict) {
   
   
   //else return undefined OR 0 something that test case won't become true since undefined does === undefined
-  return undefined;
+  return 0;
 }
