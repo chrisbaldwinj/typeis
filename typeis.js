@@ -5,6 +5,9 @@ function typeis(obj,strict) {
   
   if(obj === undefined || obj === null) //check if either or and if so return it.
     return obj;
+  
+  if(obj === NaN || obj === window || obj === Infinity)
+    return "Global";
     
   /*
     another with a href or src gets returned href or src so we change the method to [].toString.call
