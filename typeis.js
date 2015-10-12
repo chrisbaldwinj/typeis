@@ -14,7 +14,7 @@ function typeis(obj,strict) {
   t = (obj.href || obj.src || obj.toDateString || obj.replace ? [].toString.call(obj) :  obj.toString());
   
   // all html elements return as DOM!
-  if(t.indexOf("HTML") >= 0)
+  if(t.indexOf("HTML") >= 0 || t.indexOf("NodeList") >= 0)
     return "DOM";
   
   //if typeof is a boolean or function return ty  
